@@ -6,6 +6,8 @@ def get_ipl_config_opt(d):
         d.setVar('IPL_CONFIG_OPT','RCAR_DRAM_SPLIT=1')
     elif option == "2":
         d.setVar('IPL_CONFIG_OPT','RCAR_DRAM_SPLIT=2 RCAR_DRAM_CHANNEL=5')
+    elif option == "3":
+        d.setVar('IPL_CONFIG_OPT',' RCAR_DRAM_SPLIT=3 RCAR_BL33_EXECUTION_EL=1 LSI=H3 RCAR_DRAM_CHANNEL=5')
     else:
         d.setVar('IPL_CONFIG_OPT','RCAR_DRAM_SPLIT=1 RCAR_DRAM_LPDDR4_MEMCONF=0')
     return d.getVar('IPL_CONFIG_OPT')
